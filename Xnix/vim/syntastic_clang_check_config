@@ -1,0 +1,13 @@
+# mv file name as .syntastic_clang_check_config.txt to $HOME
+-W
+-Wall
+-Wextra
+-std='gnu89'
+-ansi
+-I/usr/include/
+-I/usr/include/glib-2.0/
+-I/usr/include/gtk-3.0/
+-I/usr/lib/gcc/x86_64-linux-gnu/4.8/include/
+-I/usr/lib/x86_64-linux-gnu/glib-2.0/include/
+-I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/
+-I/usr/lib/llvm-3.8/lib/clang/3.8.0/include/

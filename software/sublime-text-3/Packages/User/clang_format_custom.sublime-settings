@@ -1,0 +1,68 @@
+{
+    // 如果参数不能适应单行，还有DontAlign, AlwaysBreak
+    "AlignAfterOpenBracket": "Align",
+    // 对齐注释
+    "AlignTrailingComments": true,
+    // 允许单行块
+    "AllowShortBlocksOnASingleLine": false,
+    // 允许单行声明
+    "AllowShortIfStatementsOnASingleLine": false,
+    // 允许单行循环
+    "AllowShortLoopsOnASingleLine": false,
+    // 合并方法或函数到单独一行，None， Empty，Inline，All
+    "AllowShortFunctionsOnASingleLine": "None",
+
+    // 基于风格，类似-style
+    "BasedOnStyle": "Mozilla",
+    // 如果为false，函数调用的参数要么在同一行，要么各自有一行
+    "BinPackArguments": false,
+    // 如果为false，函数声明或者函数定义的参数要么在同一行，要么各自有一行
+    "BinPackParameters": false,
+    // 对其逗号和冒号前换行
+    "BreakConstructorInitializersBeforeComma": true,
+    // 花括号的换行方式(Attach，Stroustrup, Allman所有大括号都另起一行)
+    "BreakBeforeBraces": "Mozilla",
+
+    // 最大宽度
+    "ColumnLimit": 120,
+
+    // 指针对准
+    "DerivePointerAlignment": true,
+
+    // 缩进4个空格
+    "IndentWidth": 4,
+    "IndentCaseLabels": true,
+
+    "MaxEmptyLinesToKeep": 2,
+    "NamespaceIndentation": "None",
+
+    // 针对OC的block的缩进宽度
+    "ObjCBlockIndentWidth": 4,
+    //  针对OC的属性名后加空格
+    "ObjCSpaceAfterProperty": true,
+
+    // 指针对齐，Left, Right, Middle
+    "PointerAlignment": "Right",
+
+    // 注释重新布局
+    "ReflowComments": true,
+
+    "Standard": "Cpp11",
+    // 如果为假（false），移除分配操作符（=）前空格
+    "SpaceBeforeAssignmentOperators": true,
+    // 是否在圆括号前加空格
+    "SpaceBeforeParens": "Always",
+    // OC或者JS链表里元素空格
+    "SpacesInContainerLiterals": true,
+    // 如果为真（true）, 可能会在“（）”中插入空格。
+    "SpaceInEmptyParentheses": false,
+    // 如果为真（true）, 将会在“(”之后和“)”之前插入空格
+    "SpacesInParentheses": false,
+    // 如果为真（true）,将会在“[”之后和“]”之前插入空格 
+    "SpacesInSquareBrackets": false,
+    // 分类include
+    "SortIncludes": false,
+
+    // 是否使用Tab
+    "UseTab": "Never",
+}

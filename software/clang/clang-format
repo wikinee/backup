@@ -1,0 +1,233 @@
+---
+# 使用方法，在clang-format的-style里选择file, 基于clang-format-3.8
+
+# 语言
+Language: Cpp
+
+# 基于风格
+BasedOnStyle: Google
+
+# 访问修饰符偏移量
+# AccessModifierOffset: -2
+
+# 如果参数不能适应单行，还有Align,DontAlign, AlwaysBreak
+AlignAfterOpenBracket: Align
+
+# 连续的赋值操纵按 = 对齐
+AlignConsecutiveAssignments: false
+
+# 连续的赋值操作按变量名对齐
+AlignConsecutiveDeclarations: false
+
+# 如果为真（true）, 校准被忽略的新行距左边尽可能远。或者把它们放到列的最右边
+AlignEscapedNewlinesLeft: false
+
+# 如果为真（true）, 水平对齐二进制和三元表达式的操作数。
+AlignOperands: true
+
+# 对齐尾部注释
+# AlignTrailingComments： true
+
+# 即使BinPackParameters是假的，也允许将一个函数声明的所有参数移到下一行.
+AllowAllParametersOfDeclarationOnNextLine: false
+
+# 允许单行块
+AllowShortBlocksOnASingleLine: false
+
+# 如果为真（true）, 很短的情况下的标签将会被放到单独的行
+AllowShortCaseLabelsOnASingleLine: false
+
+# 合并方法或函数到单独一行，None，Empty，Inline，All
+AllowShortFunctionsOnASingleLine: Empty
+
+# 允许单行声明
+AllowShortIfStatementsOnASingleLine: false
+
+# 允许单行短循环
+AllowShortLoopsOnASingleLine: false
+
+# 用于函数声明返回类型换行样式 None，All，TopLevel, AllDefinition
+# AlwaysBreakAfterReturnType: TopLevelDefinitions
+
+# 如果为真（true）, 在多行字面量字符串前总是换行
+AlwaysBreakBeforeMultilineStrings: false
+
+# 总是在模板声明后换行
+# AlwaysBreakTemplateDeclarations: true
+
+# 如果为false，函数调用的参数要么在同一行，要么各自有一行
+# BinPackArguments: false
+
+# 如果为false，函数声明或者函数定义的参数要么在同一行，要么各自有一行
+# BinPackParameters: false
+
+# 括号的换行方式
+# BraceWrapping:   
+#   AfterClass:      true
+#   AfterControlStatement: false
+#   AfterEnum:       true
+#   AfterFunction:   true
+#   AfterNamespace:  false
+#   AfterObjCDeclaration: false
+#   AfterStruct:     true
+#   AfterUnion:      true
+#   BeforeCatch:     false
+#   BeforeElse:      false
+#   IndentBraces:    false
+
+# 二进制操作符换行的方法
+# BreakBeforeBinaryOperators: None
+
+# 花括号的换行方式(Attach，Stroustrup, Allman所有大括号都另起一行)
+# BreakBeforeBraces: Mozilla
+
+# 如果为真（true）, 三元运算符将被放置在换行后
+# BreakBeforeTernaryOperators: false
+
+# 对其逗号和冒号前换行
+# BreakConstructorInitializersBeforeComma: true
+
+# 换行宽度
+ColumnLimit:     80
+
+# 固定的表达式
+# CommentPragmas:  '^ IWYU pragma:'
+
+# 如果构造函数初始化器不适合在一行，把每个初始化放到单独的行
+# ConstructorInitializerAllOnOneLineOrOnePerLine: false
+
+# 使用构造函数初始化列表缩进的字符数
+# ConstructorInitializerIndentWidth: 2
+
+# 新行缩进宽度
+# ContinuationIndentWidth: 2
+
+# 如果为真（true）,格式化大括号列表达到最适合c++11列表
+# Cpp11BracedListStyle: false
+
+# 指针校准
+# DerivePointerAlignment: false
+
+# 禁用格式化, 如果想要禁用部分片段格式化，要在代码中加入类似
+# /* clang-format off */ 或者 //clang-format off 关闭
+# ... 不会被格式化的代码...
+# /* clang-format on */ 或者 //clang-format on 打开
+# DisableFormat:   false
+
+# 缩进大小写标签
+# IndentCaseLabels: true
+
+# 缩进4个空格
+IndentWidth: 2
+
+# 缩进,如果函数定义或声明后包的类型
+# IndentWrappedFunctionNames: false
+
+# 如果为真（true）, 保持块的起始空行
+# KeepEmptyLinesAtTheStartOfBlocks: true
+
+# 匹配宏指令的一个常用于开始一个块的表达式
+# MacroBlockBegin: ''
+
+# 匹配宏指令的一个常用于结束一个块的表达式
+# MacroBlockEnd:   ''
+
+# 最大连续空行
+# MaxEmptyLinesToKeep: 2
+
+# 命名空间缩进
+# NamespaceIndentation: None
+
+# 针对OC的block的缩进宽度
+# ObjCBlockIndentWidth: 2
+
+#  针对OC的属性名后加空格
+# ObjCSpaceAfterProperty: true
+
+# 在OC协议列表前添加一个空格
+# ObjCSpaceBeforeProtocolList: false
+
+# 在调用小括号“（”后给一个方法调用换行的处罚
+# PenaltyBreakBeforeFirstCallParameter: 19
+
+# 包含在一个注释中的每一个换行的处罚
+# PenaltyBreakComment: 300
+
+# 在第一个“<<”前的换行的处罚
+# PenaltyBreakFirstLessLess: 120
+
+# 包含一个字面量的字符串中的每一个换行的处罚
+# PenaltyBreakString: 1000
+
+# 每一个字符的列限制外的处罚
+# PenaltyExcessCharacter: 1000000
+
+# 把一个方法返回类型放到函数的同一行
+# PenaltyReturnTypeOnItsOwnLine: 200
+
+# 指针对齐，Left, Right, Middle
+# PointerAlignment: Right
+
+# 注释重新布局
+# ReflowComments:  true
+
+# 分类Include
+# SortIncludes:    false
+
+# 如果为真（true）, 可能在一个C样式描述后插入一个空格
+# SpaceAfterCStyleCast: false
+
+# 如果为假（false），移除分配操作符（=）前空格
+# SpaceBeforeAssignmentOperators: true
+
+# 是否在圆括号前加空格
+# SpaceBeforeParens: ControlStatements
+
+# 如果为真（true）, 可能会在“（）”中插入空格。
+# SpaceInEmptyParentheses: false
+
+# 单行注释的空格数
+SpacesBeforeTrailingComments: 2
+
+# 如果为真（true）, 将会在模板对齐列的“<>”中间插入空格
+# SpacesInAngles:  false
+
+# OC或者JS链表里元素空格
+# SpacesInContainerLiterals: true
+
+# 如果为真（true）, 将会在C样式描述中插入空格
+# SpacesInCStyleCastParentheses: false
+
+# 如果为真（true）, 将会在“(”之后和“)”之前插入空格
+# SpacesInParentheses: false
+
+# 如果为真（true）,将会在“[”之后和“]”之前插入空格 
+# SpacesInSquareBrackets: false
+
+# 标准
+# Standard:        Cpp11
+
+# Tab宽度
+TabWidth:        2
+
+# 是否使用Tab
+UseTab:          Never
+
+---
+
+# Java 语言
+Language: Java
+
+# Java 每行字符限制设置为100。
+ColumnLimit: 100
+
+---
+
+# Makefile
+Language： Makefile
+
+# 是否使用Tab
+UseTab： Always
+TabWidth： 8
+
+...

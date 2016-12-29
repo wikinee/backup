@@ -1,0 +1,16 @@
+// 将键绑定放入此文件中以覆盖默认值
+[
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.tasks.build"
+    },
+    {
+        "key": "f6",
+        "command": "workbench.action.tasks.test"
+        // "command": "workbench.action.tasks.runTask"
+    },
+    { 
+        "key": "f7",
+        "command": "cmake.build"
+    }
+]

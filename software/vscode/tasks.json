@@ -1,0 +1,45 @@
+{
+    /*
+     * http://code.visualstudio.com/docs/editor/tasks
+     * created by wikinee
+     * 2016.12.23
+     * ${workspaceRoot} the path of the folder opened in VS Code
+     * ${workspaceRootFolderName} the name of the folder opened in VS Code without any slashes (/)
+     * ${file} the current opened file
+     * ${relativeFile} the current opened file relative to workspaceRoot
+     * ${fileBasename} the current opened file's basename
+     * ${fileBasenameNoExtension} the current opened file's basename without the extension
+     * ${fileDirname} the current opened file's dirname
+     * ${fileExtname} the current opened file's extension
+     * ${cwd} the task runner's current working directory on startup
+     * You can also reference environment variables through ${env.Name} (e.g. ${env.PATH}).
+     */
+    "version": "0.1.0",
+    "command": "sh",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "args": [
+        "-c"
+    ],
+    "tasks": [
+        {
+            "taskName": "make",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": ["${workspaceRoot}/make"]
+        },
+        {
+            "taskName": "cpplint",
+            "isTestCommand": true,
+            "suppressTaskName": true,
+            "args": [
+                "cpplint --repository=${workspaceRoot} --output=vs7 --counting=detailed --linelength=80 ${cwd}/*.cpp ${cwd}/*.h"
+            ]
+        },
+        {
+            "taskName": "git status",
+            "suppressTaskName": true,
+            "args": ["git status ."]
+        }
+    ]
+}
