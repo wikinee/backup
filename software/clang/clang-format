@@ -23,25 +23,25 @@ AlignConsecutiveDeclarations: false
 AlignEscapedNewlinesLeft: false
 
 # 如果为真（true）, 水平对齐二进制和三元表达式的操作数。
-AlignOperands: true
+# AlignOperands: false
 
 # 对齐尾部注释
 # AlignTrailingComments： true
 
 # 即使BinPackParameters是假的，也允许将一个函数声明的所有参数移到下一行.
-AllowAllParametersOfDeclarationOnNextLine: false
+# AllowAllParametersOfDeclarationOnNextLine: false
 
 # 允许单行块
 AllowShortBlocksOnASingleLine: false
 
 # 如果为真（true）, 很短的情况下的标签将会被放到单独的行
-AllowShortCaseLabelsOnASingleLine: false
+# AllowShortCaseLabelsOnASingleLine: false
 
 # 合并方法或函数到单独一行，None，Empty，Inline，All
 AllowShortFunctionsOnASingleLine: Empty
 
 # 允许单行声明
-AllowShortIfStatementsOnASingleLine: false
+# AllowShortIfStatementsOnASingleLine: false
 
 # 允许单行短循环
 AllowShortLoopsOnASingleLine: false
@@ -50,7 +50,7 @@ AllowShortLoopsOnASingleLine: false
 # AlwaysBreakAfterReturnType: TopLevelDefinitions
 
 # 如果为真（true）, 在多行字面量字符串前总是换行
-AlwaysBreakBeforeMultilineStrings: false
+# AlwaysBreakBeforeMultilineStrings: false
 
 # 总是在模板声明后换行
 # AlwaysBreakTemplateDeclarations: true
@@ -103,7 +103,7 @@ ColumnLimit:     80
 # ContinuationIndentWidth: 2
 
 # 如果为真（true）,格式化大括号列表达到最适合c++11列表
-# Cpp11BracedListStyle: false
+Cpp11BracedListStyle: false
 
 # 指针校准
 # DerivePointerAlignment: false
@@ -166,7 +166,7 @@ IndentWidth: 2
 # PenaltyReturnTypeOnItsOwnLine: 200
 
 # 指针对齐，Left, Right, Middle
-# PointerAlignment: Right
+PointerAlignment: Right
 
 # 注释重新布局
 # ReflowComments:  true
@@ -205,7 +205,7 @@ SpacesBeforeTrailingComments: 2
 # SpacesInSquareBrackets: false
 
 # 标准
-# Standard:        Cpp11
+Standard:        Cpp11
 
 # Tab宽度
 TabWidth:        2
