@@ -288,7 +288,7 @@ filetype plugin indent on    " required
     " <Leader> default is \
     let mapleader=","       " leader is comma
     " ff is escape
-    inoremap ff <esc>
+    " inoremap ff <esc>
     " toggle gundo
     nnoremap <leader>u :GundoToggle<CR>
     " edit vimrc/zshrc and load vimrc bindings
