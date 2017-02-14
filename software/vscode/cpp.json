@@ -17,11 +17,6 @@
 	"new cpp file": {
 		"prefix": "newcpp",
 		"body": [
-			"/*",
-			" * Copyright [${1:2017}] create by ${2:wiki}",
-			" *",
-			" */",
-			"",
 			"#include<iostream>",
 			"",
 			"using std::cout;",
@@ -30,7 +25,7 @@
 		]
 	},
 	"new main": {
-		"prefix": "nmain",
+		"prefix": "main",
 		"body": [
 			"int main(${1:void}) {",
 			"  ${2}",
@@ -40,15 +35,26 @@
 		]
 	},
 	"head file": {
-	"prefix": "ifndef",
+	"prefix": "head",
 	"body": [
-			"#ifndef _${1}_H_",
-			"#define _${1}_H_",
+			"#ifndef ${1}_H_",
+			"#define ${1}_H_",
 			"",
 			"${2}",
 			"",
-			"#endif  // _${1}_H_",
+			"#endif  // ${1}_H_",
 			""
+		]
+	},
+	"copyright": {
+		"prefix": "copyright",
+		"body": [
+			"// Copyright ${1:2017} ${2:XXX} Inc.",
+			"// All rights reserved.",
+			"//",
+			"// Author: ${3:xxx}@gmail.com ()",
+			"//",
+			"// This file is for ${4:test}"
 		]
 	}
 }
