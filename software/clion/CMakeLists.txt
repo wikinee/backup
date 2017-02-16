@@ -21,6 +21,8 @@ set(SOURCE_FILES main.c)
 add_executable(testGlib ${SOURCE_FILES})
 
 # add gtk3 support
+# pkg name can run follow command to check
+# pkg-config --list-all | grep YOU_WANT_CHECK
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 pkg_check_modules(GLIB REQUIRED glib-2.0)
