@@ -1,0 +1,20 @@
+# debian 8.6 source list
+# llvm
+deb http://apt.llvm.org/jessie/ llvm-toolchain-jessie main
+deb-src http://apt.llvm.org/jessie/ llvm-toolchain-jessie main
+# llvm-3.9
+deb http://apt.llvm.org/jessie/ llvm-toolchain-jessie-3.9 main
+deb-src http://apt.llvm.org/jessie/ llvm-toolchain-jessie-3.9 main
+# llvm-4.0 
+deb http://apt.llvm.org/jessie/ llvm-toolchain-jessie-4.0 main
+deb-src http://apt.llvm.org/jessie/ llvm-toolchain-jessie-4.0 main
+
+# 163
+deb http://mirrors.163.com/debian/ jessie main non-free contrib
+deb http://mirrors.163.com/debian/ jessie-updates main non-free contrib
+deb http://mirrors.163.com/debian/ jessie-backports main non-free contrib
+deb-src http://mirrors.163.com/debian/ jessie main non-free contrib
+deb-src http://mirrors.163.com/debian/ jessie-updates main non-free contrib
+deb-src http://mirrors.163.com/debian/ jessie-backports main non-free contrib
+deb http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib
+deb-src http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib
