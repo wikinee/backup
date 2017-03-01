@@ -5,6 +5,16 @@
 # $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
 # $ sudo mv ./Ubuntu_14.04_LTS_China_sources.list /etc/apt/sources.list
 
+# llvm suit for Ubuntu 16.04, other version need visit apt.llvm.org 
+deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial main
+deb-src http://apt.llvm.org/xenial/ llvm-toolchain-xenial main
+# 3.9
+deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-3.9 main
+deb-src http://apt.llvm.org/xenial/ llvm-toolchain-xenial-3.9 main
+# 4.0
+deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-4.0 main
+deb-src http://apt.llvm.org/xenial/ llvm-toolchain-xenial-4.0 main
+
 # official
 deb http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted
 deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted
