@@ -1,5 +1,7 @@
 # debian 8.6 source list
 # llvm
+# maybe add gpg.key first
+# wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 deb http://apt.llvm.org/jessie/ llvm-toolchain-jessie main
 deb-src http://apt.llvm.org/jessie/ llvm-toolchain-jessie main
 # llvm-3.9
