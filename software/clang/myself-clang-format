@@ -61,7 +61,7 @@ IncludeCategories:
     Priority:        2
   - Regex:           '^(<|"(gtest|isl|json)/)'
     Priority:        3
-  - Regex:           '.\*'
+  - Regex:           '.*'
     Priority:        1
 IncludeIsMainRegex: '([-_](test|unittest))?$'
 IndentCaseLabels: false
@@ -87,13 +87,14 @@ PointerAlignment: Left
 ReflowComments:  true
 SortIncludes:    false
 SpaceAfterCStyleCast: false
+# SpaceAfterTemplateKeyword: false
 SpaceBeforeAssignmentOperators: true
 SpaceBeforeParens: ControlStatements
 SpaceInEmptyParentheses: false
 SpacesBeforeTrailingComments: 2
 SpacesInAngles:  false
 SpacesInContainerLiterals: true
-SpacesInCStyleCastParentheses: true
+SpacesInCStyleCastParentheses: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
 Standard:        Cpp11
