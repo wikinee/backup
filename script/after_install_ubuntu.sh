@@ -13,8 +13,7 @@ totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot \
 gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku \
 landscape-client-ui-install onboard deja-dup
 
-sudo apt-get install git meld clang cmake vim-youcompleteme \
-devhelp autojump zsh  classicmenu-indicator vpnc exfat-fuse unrar \
-gnome-tweak-tool llvm exuberant-ctags
+sudo apt-get install git meld devhelp autojump \
+zsh exfat-fuse unrar-free exuberant-ctags
 
 sudo apt-get upgrade;sudo apt-get autoremove

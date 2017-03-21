@@ -60,7 +60,7 @@ Other:https://github.com/vim/vim
             --enable-fail-if-missing
             
 
-make VIMRUNTIMEDIR=/usr/share/vim/vim74 && sudo make install
+make VIMRUNTIMEDIR=/usr/share/vim/vim80 && sudo make install
 
 sudo ln -s /usr/bin/vi /usr/bin/vim
 
