@@ -12,4 +12,6 @@ find file:
 
 move it to directory /home/username/Soft/qtcreator/plugins/platforminputcontexts/
 
+this method also work in Understand, WPS, and other Qt project chinese input.
+
 enjoy it!
