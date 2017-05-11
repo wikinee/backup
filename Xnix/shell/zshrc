@@ -246,3 +246,6 @@ autojump_file="/usr/share/autojump/autojump.sh"
 if [ -f "$autojump_file" ];then
     . /usr/share/autojump/autojump.sh
 fi
+
+# for debian
+export EDITOR="gedit"

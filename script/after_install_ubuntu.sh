@@ -14,6 +14,6 @@ gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku \
 landscape-client-ui-install onboard deja-dup
 
 sudo apt-get install git meld devhelp autojump \
-zsh exfat-fuse unrar-free exuberant-ctags
+zsh unrar-free exuberant-ctags fonts-noto-cjk fonts-noto fonts-noto-mono
 
 sudo apt-get upgrade;sudo apt-get autoremove
