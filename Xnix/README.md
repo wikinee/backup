@@ -10,8 +10,6 @@ Software Lists
 - devhelp
 - autojump
 - zsh (and oh_my_sh)
-- classicmenu-indicator
-- vpnc
 - exfat-fuse
 - unrar
 
