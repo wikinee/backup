@@ -283,10 +283,13 @@ elseif (has("gui_running") && g:solarized_degrade == 1)
 elseif g:solarized_termcolors != 256 && &t_Co >= 16
     let s:vmode       = "cterm"
     let s:base03      = "8"
+    " base02 is line number background color
     let s:base02      = "0"
-    let s:base01      = "10"
-    let s:base00      = "11"
-    let s:base0       = "12"
+    " base01(default 10) & base0(default 12) is text color.
+    let s:base01      = "14"
+    " fix base00 10->13
+    let s:base00      = "13"
+    let s:base0       = "15"
     let s:base1       = "14"
     let s:base2       = "7"
     let s:base3       = "15"

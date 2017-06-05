@@ -11,6 +11,8 @@ set nocompatible              " be iMproved, use vim to do as vi, required
 filetype off                  " required
 set backspace=indent,eol,start " use backspace in Insert mode
 set mouse=a
+set mousemodel=popup
+set clipboard=unnamed 
 let &colorcolumn="81,"."121"
 " set the runtime path to include Vundle and initialize
 " $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -233,10 +235,10 @@ filetype plugin indent on    " required
 " morning, murphy, pablo, peachpuff, ron, shine, slate, torte, zellner 
 " also can use you favorite scheme: molokai or solarized
     if has("syntax")
-       syntax on
+      syntax enable
     endif
     set t_Co=256
-    let g:solarized_termcolors=256
+    " let g:solarized_termcolors=256
     set background=dark
     colorscheme solarized
 
