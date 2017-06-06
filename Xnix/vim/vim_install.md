@@ -47,12 +47,13 @@ brew install vim --with-lua \
 
     4. 编译安装。
     ```
-    ./configure --prefix=/usr \
+    ./configure --prefix=/usr/local \
                 --with-features=huge \
                 --enable-multibyte \
                 --enable-luainterp=yes \
                 --enable-pythoninterp=yes \
                 --enable-python3interp=yes \
+                --enable-termguicolors=yes \
                 --enable-gui=auto \
                 --enable-gnome-check \
                 --enable-xim \

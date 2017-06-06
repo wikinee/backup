@@ -237,6 +237,11 @@ filetype plugin indent on    " required
     if has("syntax")
       syntax enable
     endif
+
+    if has("termguicolor")
+	  set termguicolor
+	endif
+ 
     set t_Co=256
     " let g:solarized_termcolors=256
     set background=dark
