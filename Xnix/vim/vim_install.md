@@ -31,6 +31,8 @@ brew install vim --with-lua \
     ```
     sudo apt-get remove vim vim-runtime  vim-tiny vim-common vim-gui-common
     sudo apt-get purge vim vim-runtime  vim-tiny vim-common vim-gui-common
+    或
+    sudo apt-get autoremove vim vim-runtime  vim-tiny vim-common vim-gui-common --purge
     ```
     2. 安装依赖文件。
     
@@ -41,7 +43,7 @@ brew install vim --with-lua \
     ```
     3. 下载vim代码。
     ```
-    Ubunu:apt-get source vim
+    Ubunu/Debian:apt-get source vim
     Other:https://github.com/vim/vim
     ```
 
@@ -49,23 +51,24 @@ brew install vim --with-lua \
     ```
     ./configure --prefix=/usr/local \
                 --with-features=huge \
-                --enable-multibyte \
+                --enable-fail-if-missing
+		--enable-fontset \
+                --enable-gui=auto \
+                --enable-gnome-check \
                 --enable-luainterp=yes \
+                --enable-multibyte \
                 --enable-pythoninterp=yes \
                 --enable-python3interp=yes \
                 --enable-termguicolors=yes \
-                --enable-gui=auto \
-                --enable-gnome-check \
                 --enable-xim \
                 --with-x \
                 --with-vim-name=vi \
-                --with-compiledby=$USER \
-                --enable-fail-if-missing
-            
+                --with-compiledby=$USER
+           
 
-    make VIMRUNTIMEDIR=/usr/share/vim/vim80 && sudo make install
+    make VIMRUNTIMEDIR=/usr/local/share/vim/vim80 && sudo make install
 
-    sudo ln -s /usr/bin/vi /usr/bin/vim
+    sudo ln -s /usr/local/bin/vim /usr/local/bin/vi
 
     ```
 
