@@ -1,16 +1,16 @@
 vim install
 ------
 
-### VIM
+### About VIM
 
-[home](http://www.vim.org/)
+[Project](http://www.vim.org/)
 
-[github](https://github.com/vim/vim)
+[Github](https://github.com/vim/vim)
 
 ### VIM install
 
-|ways\OS|windows|Ubuntu|Mac|
-| ------------- |:-------------:|:-------------:|:-------------:|
+|types\OS|windows|Ubuntu|Mac|
+|:-------------:|:-------------:|:-------------:|:-------------:|
 |gVIM|√|√|√|
 |Source Code|√|√|√|
 |binary packages|√|√|×|
@@ -52,7 +52,7 @@ brew install vim --with-lua \
     ./configure --prefix=/usr/local \
                 --with-features=huge \
                 --enable-fail-if-missing
-		--enable-fontset \
+                --enable-fontset \
                 --enable-gui=auto \
                 --enable-gnome-check \
                 --enable-luainterp=yes \

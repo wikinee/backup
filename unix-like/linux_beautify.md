@@ -21,6 +21,7 @@ solarized: dark
 - colortx: #BABDB6 or #D3D7CF
 - colorbg: #002B36
 - colorbd: #D3D7CF (bold)
+- color05: #E7ECFF (executable directory text color)
 - color09: #002B36
 - color10: #DC322F
 - color11: #859900 (executable)
