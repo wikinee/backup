@@ -31,7 +31,8 @@ if [ "use_taobao_ruby" == "" ]; then
   rvm use ${ruby_version:-2.2.1} --default
   echo "===================RubyGems Mirror==========================="
   gem sources --remove https://ruby.taobao.org
-  gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
+  gem sources --remove https://gems.ruby-china.org
+  gem sources --add https://gems.ruby-china.org --remove https://rubygems.org/
   echo "please make sure only have ruby.taobao.org"
 fi  
 gem sources -l
