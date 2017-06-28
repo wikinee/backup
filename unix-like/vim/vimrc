@@ -356,6 +356,7 @@ filetype plugin indent on    " required
     augroup configgroup
         autocmd!
         autocmd VimEnter * highlight clear SignColumn
+        autocmd Filetype gitcommit setlocal spell textwidth=72
         autocmd FileType java setlocal noexpandtab
         autocmd FileType java setlocal list
         autocmd FileType java setlocal listchars=tab:+\ ,eol:-
