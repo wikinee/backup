@@ -49,9 +49,11 @@ brew install vim --with-lua \
 
     4. 编译安装。
     ```
+    cd vim/src/
+
     ./configure --prefix=/usr/local \
                 --with-features=huge \
-                --enable-fail-if-missing
+                --enable-fail-if-missing \
                 --enable-fontset \
                 --enable-gui=auto \
                 --enable-gnome-check \
