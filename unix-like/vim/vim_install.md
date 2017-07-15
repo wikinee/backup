@@ -57,7 +57,6 @@ brew install vim --with-lua \
                 --enable-fontset \
                 --enable-gui=auto \
                 --enable-gnome-check \
-                --enable-luainterp=yes \
                 --enable-multibyte \
                 --enable-pythoninterp=yes \
                 --enable-python3interp=yes \
