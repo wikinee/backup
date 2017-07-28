@@ -190,7 +190,8 @@ filetype plugin indent on    " required
 
     " checkers
     let g:ale_linters = {'c': 'gcc'}
-    let g:ale_c_gcc_options = '-std=gnu99 -Wall -l/usr/include/gtk-3.0'
+    let g:ale_c_gcc_options = '-std=gnu99 -Wall `pkg-config --cflags gtk+-3.0`'
+    let g:ale_c_build_dir_names=['build', 'bin']
     let g:ale_linters = {'c++': 'clang++'}
     let g:ale_linters = {'python': 'all'}
     
