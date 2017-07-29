@@ -53,7 +53,7 @@ Plugin 'sjl/gundo.vim'
 
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
-
+Bundle 'bronson/vim-trailing-whitespace'
 " https://github.com/mattn/emmet-vim
 " Plugin 'mattn/emmet-vim'
 Plugin 'vim-scripts/a.vim'
