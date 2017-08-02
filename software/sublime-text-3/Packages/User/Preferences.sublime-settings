@@ -1,5 +1,5 @@
 {
-    "auto_indent": true,
+	"auto_indent": true,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
 	"fade_fold_buttons": false,
@@ -22,4 +22,6 @@
 	"translate_tabs_to_spaces": true,
 	"word_wrap": true,
 	"wrap_width": 80,
+	"draw_white_space": "all",
+	"trim_trailing_white_space_on_save": true
 }
