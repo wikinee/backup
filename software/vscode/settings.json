@@ -34,5 +34,7 @@
     ],
     "files.associations": {
         "*.am": "makefile"
-    }
+    },
+    "editor.renderWhitespace": "boundary",
+    "editor.trimAutoWhitespace": true
 }
