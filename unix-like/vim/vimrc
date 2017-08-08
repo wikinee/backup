@@ -12,15 +12,15 @@ filetype off                  " required
 set backspace=indent,eol,start " use backspace in Insert mode
 set mouse=a
 set mousemodel=popup
-set clipboard=unnamed 
-" let &colorcolumn="81,"."121"
+set clipboard=unnamed
+let &colorcolumn="81,"."121"
 " set the runtime path to include and initialize
 " $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set rtp+=/usr/share/vim/bundle/Vundle.vim
 call vundle#begin('/usr/share/vim/bundle')
 " alternatively, pass a path where Vundle should install plugins
 " call vundle#begin() to download in default path
- 
+
 " let Vundle manage Vundle, required
 " plugin from https://github.com/ctrlpvim/ctrlp.vim
 Plugin 'VundleVim/Vundle.vim'
@@ -32,6 +32,7 @@ Plugin 'scrooloose/nerdtree'
 " Plugin 'scrooloose/syntastic'
 " Replace with 'w0rp/ale'
 Plugin 'w0rp/ale'
+Plugin 'liuchengxu/vim-better-default'
 Plugin 'jiangmiao/auto-pairs'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -41,7 +42,7 @@ Plugin 'jiangmiao/auto-pairs'
 
 " https://github.com/Shougo/neocomplete.vim
 " git@github.com:majutsushi/tagbar.git
-" use vim-youcompleteme.deb and vam install youcompleteme 
+" use vim-youcompleteme.deb and vam install youcompleteme
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'sjl/gundo.vim'
@@ -57,7 +58,6 @@ Bundle 'bronson/vim-trailing-whitespace'
 " https://github.com/mattn/emmet-vim
 " Plugin 'mattn/emmet-vim'
 Plugin 'vim-scripts/a.vim'
-" Plugin 'vim-scripts/echofunc.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -94,15 +94,15 @@ filetype plugin indent on    " required
     "ctrl + j/k: up / down
     "ctrl + x: split open
     "ctrl + v: vsplit open
-    "ctrl + t: open in new tab 
+    "ctrl + t: open in new tab
 
 " Airline settings
     " must install Powerline fonts, url:
     " https://github.com/powerline/fonts
-    let g:airline_powerline_fonts=1 
+    let g:airline_powerline_fonts=1
     let g:airline#extensions#tabline#enabled = 1
     set guifont=Source\ Code\ Pro\ for\ Powerline
-    " let g:airline_theme="luna" 
+    " let g:airline_theme="luna"
     let g:airline#extensions#tabline#buffer_nr_show = 1
     " ignore follow settings
     let g:airline#extensions#whitespace#enabled = 0
@@ -111,7 +111,7 @@ filetype plugin indent on    " required
 " NERDTree settings
     :map <C-f> :NERDTree<CR>
     " ctrl + w + w  switch tabs
-    " o     open or close a folder or input go 
+    " o     open or close a folder or input go
     " i      open file vertical split window or input gi
     " s     oepn file horizonal split window or input gs
     " t     create new tab,and jump
@@ -126,7 +126,7 @@ filetype plugin indent on    " required
     " :tabs check all open tab
     " :tabp preview tab
     " :tabn next tab
-    " gt, gT command add gxxx  means preview the file 
+    " gt, gT command add gxxx  means preview the file
 
 " tarbar settings
     " tarbar need ctags
@@ -138,28 +138,13 @@ filetype plugin indent on    " required
     "key map tagbar toggle
     map <F8> :TagbarToggle<CR>
 
-" emmet-vim settings 
+" emmet-vim settings
     let g:user_emmet_mode='n'    "only enable normal mode functions.
     let g:user_emmet_mode='inv'  "enable all functions, which is equal to
     let g:user_emmet_mode='a'    "enable all function in all mode.
     let g:user_emmet_install_global = 0
     autocmd FileType html,css EmmetInstall
     let g:user_emmet_leader_key = '<C-e>'    " Control + e + ,
-
-" echofunc settings
-    " F9 will build tags file,
-    " then, set tags=tags 
-    " if you want use library tags, cd /usr/include
-    " sudo ctags --c-kinds=+p --fields=+ailS --extra=+q .
-    " other catalog
-    " sudo ctags --c-kinds=+p --fields=+ailS --extra=+q -R
-    set tags+=./tags
-    set tags+=/usr/include/tags
-    set tags+=/usr/include/glib-2.0/tags
-    set tags+=/usr/include/gtk-3.0/tags
-    " set tags+=/usr/include/c++/tags
-    " set tags+=/usr/include/Qt/tags
-    map <F9> :w !ctags -R --fields=+ailS --c-kinds=+p --extra=+q *<CR>
 
 " ale settings
     set statusline+=%#warningmsg#
@@ -194,7 +179,7 @@ filetype plugin indent on    " required
     let g:ale_c_build_dir_names=['build', 'bin']
     let g:ale_linters = {'c++': 'clang++'}
     let g:ale_linters = {'python': 'all'}
-    
+
     " disable
     let g:ale_linters = {
     \   'javascript': ['eslint'],
@@ -227,7 +212,7 @@ filetype plugin indent on    " required
     " let g:syntastic_cpp_checkers = ['cpplint']
     " let g:syntastic_cpp_cpplint_exec = 'cpplint'
     " let g:syntastic_cpp_cpplint_thres = 5
-    " let g:syntastic_cpp_cpplint_args = '--verbose=3'  
+    " let g:syntastic_cpp_cpplint_args = '--verbose=3'
     " let g:syntastic_python_checkers=['pylint']
     " let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
     " let g:syntastic_aggregate_errors = 1
@@ -241,12 +226,12 @@ filetype plugin indent on    " required
     " find global configure file
     " let g:ycm_global_ycm_extra_conf = '/usr/lib/ycmd/ycm_extra_conf.py'
     " forbid syntastic check python file
-    " let g:syntastic_ignore_files=[".*\.py$"] 
+    " let g:syntastic_ignore_files=[".*\.py$"]
     " use ctags file
     let g:ycm_collect_identifiers_from_tag_files = 1
     " Start complete, change default hot key
     " default CTRL+space，change to Shift+space
-    let g:ycm_key_invoke_completion = '<S-space>' 
+    let g:ycm_key_invoke_completion = '<S-space>'
     " keywords completion
     "let g:ycm_seed_identifiers_with_syntax = 1
     " set completeopt-=preview
@@ -275,7 +260,7 @@ filetype plugin indent on    " required
 " Colors
 " /usr/share/vim/vim_VERSION/colors,default are following:
 " blue, darkblue, default, delek, desert, elflord, evening,koehler
-" morning, murphy, pablo, peachpuff, ron, shine, slate, torte, zellner 
+" morning, murphy, pablo, peachpuff, ron, shine, slate, torte, zellner
 " also can use you favorite scheme: molokai or solarized
     if has("syntax")
       syntax enable
@@ -284,11 +269,13 @@ filetype plugin indent on    " required
     if has("termguicolor")
 	  set termguicolor
 	endif
- 
+
     set t_Co=256
     " let g:solarized_termcolors=256
     set background=dark
-    colorscheme solarized
+    " colorscheme solarized
+    " colorscheme molokai
+    colorscheme gruvbox
 
 " Space and Tab
     set tabstop=4           " tab is 4 spaces
@@ -309,7 +296,7 @@ filetype plugin indent on    " required
     set incsearch           " search as characters are entered
     set hlsearch            " highlight matches
     " turn off search highlight
-    " set nohlsearch    
+    " set nohlsearch
 
 
 " Folding
@@ -321,7 +308,7 @@ filetype plugin indent on    " required
 " Movement
     " move vertically by visual line
     " nnoremap only work in vim-normal mode,alike vnoremap, inoremap
-    nnoremap j gj           
+    nnoremap j gj
     nnoremap k gk
     " move to beginning/end of line
     nnoremap B ^
@@ -336,7 +323,7 @@ filetype plugin indent on    " required
 " Leader Shortcuts
     " :map <Leader>A oanother line<Esc> equal :map \A oanother line<Esc>
     " <Leader> default is \
-    let mapleader=","       " leader is comma
+    " let mapleader=","       " leader is comma
     " ff is escape
     " inoremap ff <esc>
     " toggle gundo
@@ -344,7 +331,7 @@ filetype plugin indent on    " required
     " edit vimrc/zshrc and load vimrc bindings
     nnoremap <leader>ev :vsp $MYVIMRC<CR>
     nnoremap <leader>ez :vsp ~/.zshrc<CR>
-    nnoremap <leader>sv :source $MYVIMRC<CR>
+    " nnoremap <leader>sv :source $MYVIMRC<CR>
     " save session
     nnoremap <leader>s :mksession<CR>
     " open ag.vim
@@ -386,7 +373,7 @@ filetype plugin indent on    " required
             set relativenumber
         endif
     endfunc
-    
+
     map <F3> :w<CR>
     map <F4> :call CompileC()<CR>
     function! CompileC()
