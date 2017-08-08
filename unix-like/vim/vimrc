@@ -26,8 +26,8 @@ call vundle#begin('/usr/share/vim/bundle')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rhysd/vim-clang-format'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'scrooloose/syntastic'
 " Replace with 'w0rp/ale'
@@ -281,6 +281,11 @@ filetype plugin indent on    " required
     set tabstop=4           " tab is 4 spaces
     set expandtab           " use space replace tab
 
+" Status Line
+    " replace air-line
+    set laststatus=2
+    set statusline=%y\ <==>\ format:\ %{&ff};\ <==>\ [%c,%l]
+    set statusline+=\ <==>\ %4*\ %F\ %*
 
 " UI config
     set number              " show line numbers
@@ -408,6 +413,7 @@ filetype plugin indent on    " required
         autocmd BufEnter *.sh setlocal softtabstop=2
         autocmd BufRead,BufNewFile *.html,*.js setlocal shiftwidth=2
         autocmd BufRead,BufNewFile *.html,*.js setlocal tabstop=2
+        " autocmd BufWritePre * :%s/\s\+$//e
     augroup END
 
 " quickfix settings:w
