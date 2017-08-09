@@ -14,6 +14,8 @@ set mouse=a
 set mousemodel=popup
 set clipboard=unnamed
 let &colorcolumn="81,"."121"
+runtime! plugin/default.vim
+set norelativenumber
 " set the runtime path to include and initialize
 " $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set rtp+=/usr/share/vim/bundle/Vundle.vim
@@ -174,17 +176,16 @@ filetype plugin indent on    " required
     nmap <Leader>d :ALEDetail<CR> " detail
 
     " checkers
-    let g:ale_linters = {'c': 'gcc'}
-    let g:ale_c_gcc_options = '-std=gnu99 -Wall `pkg-config --cflags gtk+-3.0`'
-    let g:ale_c_build_dir_names=['build', 'bin']
-    let g:ale_linters = {'c++': 'clang++'}
-    let g:ale_linters = {'python': 'all'}
-
-    " disable
     let g:ale_linters = {
-    \   'javascript': ['eslint'],
-    \}
-
+        \    'c' : ['gcc'],
+        \    'python' : ['pylint'],
+        \    'cpp' : ['clang'],
+        \}
+    let g:ale_c_gcc_options = '-std=gnu99 -Wall `pkg-config --cflags --libs gtk+-3.0`'
+    let g:ale_cpp_gcc_options = '-std=cpp11 -Wall `pkg-config --cflags --libs gtk+-3.0`'
+    let g:ale_cpp_clang_options = '-std=cpp11 -Wall'
+    let g:ale_c_build_dir_names=['build', 'bin']
+    
 " syntastic settings
     " use gcc in syntastic
     " set statusline+=%#warningmsg#
@@ -267,8 +268,8 @@ filetype plugin indent on    " required
     endif
 
     if has("termguicolor")
-	  set termguicolor
-	endif
+      set termguicolor
+    endif
 
     set t_Co=256
     " let g:solarized_termcolors=256
@@ -379,13 +380,13 @@ filetype plugin indent on    " required
         endif
     endfunc
 
-    map <F3> :w<CR>
-    map <F4> :call CompileC()<CR>
-    function! CompileC()
-    let config_param=" `pkg-config --cflags --libs glib-2.0 gtk+-3.0`"
-    exec ":w !gcc % -o %<".config_param
-    endfunc
-    map <F5> :make<CR>
+    " map <F3> :w<CR>
+    " map <F4> :call CompileC()<CR>
+    " function! CompileC()
+    " let config_param=" `pkg-config --cflags --libs glib-2.0 gtk+-3.0`"
+    " exec ':w !gcc % -o %<'.config_param
+    " endfunc
+    " map <F5> :make<CR>
 
 " Autogroups
     augroup configgroup
