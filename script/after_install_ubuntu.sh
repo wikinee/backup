@@ -2,7 +2,8 @@
 # Program:
 #	Run this shell script after Install Ubuntu.
 #History:
-#2016/10/29  wikinee First release
+# 2016/10/29  wikinee First release
+# 2017/08/12  update 
 
 echo " Now, Update & Grade ..."
 
@@ -14,6 +15,7 @@ gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku \
 landscape-client-ui-install onboard deja-dup
 
 sudo apt-get install git meld devhelp autojump \
-zsh unrar-free exuberant-ctags fonts-noto-cjk fonts-noto fonts-noto-mono screenfetch
+zsh unrar-free exuberant-ctags fonts-noto-cjk fonts-noto \
+fonts-noto-mono screenfetch htop gitk unrar
 
 sudo apt-get upgrade;sudo apt-get autoremove
