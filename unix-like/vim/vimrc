@@ -185,6 +185,7 @@ filetype plugin indent on    " required
     let g:ale_c_gcc_options = '-std=gnu99 -Wall `pkg-config --cflags --libs gtk+-3.0`'
     let g:ale_cpp_gcc_options = '-std=cpp11 -Wall `pkg-config --cflags --libs gtk+-3.0`'
     let g:ale_cpp_clang_options = '-std=cpp11 -Wall'
+    let g:ale_python_pylint_options = '--rcfile=/usr/local/selfconfig/myself.pylintrc'
     let g:ale_c_build_dir_names=['build', 'bin']
 
 " syntastic settings
