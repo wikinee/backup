@@ -1,13 +1,14 @@
 // 将设置放入此文件中以覆盖默认设置
 {
     "files.autoSave": "onFocusChange",
-    "editor.fontSize": 16,
-    "editor.tabSize": 2,
-    "editor.wordWrap": true,
+    "editor.fontSize": 17,
+    "editor.tabSize": 4,
+    "editor.fontFamily": "Monaco",
+    "editor.wordWrap": "off",
     // "editor.wrappingColumn": 80,
-    "editor.formatOnSave": true,
-    "clang-format.executable": "/usr/bin/clang-format",
-    "clang.executable": "/usr/bin/clang",
+    // "editor.formatOnSave": true,
+    "clang-format.executable": "/usr/bin/clang-format-3.9",
+    "clang.executable": "/usr/bin/clang-3.9",
     "clang-format.style": "file",
     "clang.cflags": [
         // All
@@ -35,6 +36,9 @@
     "files.associations": {
         "*.am": "makefile"
     },
+    "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "editor.renderWhitespace": "boundary",
-    "editor.trimAutoWhitespace": true
+    "editor.trimAutoWhitespace": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.renderIndentGuides": false
 }
