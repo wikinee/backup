@@ -1,0 +1,12 @@
+[user]
+	email = xxx@xxxx.xx
+	name = xxxxxx
+[color]
+	ui = true
+[core]
+	editor = vi
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    co = checkout
+[help]
+    format = html
