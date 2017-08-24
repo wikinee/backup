@@ -39,6 +39,7 @@ call vundle#begin('/usr/share/vim/bundle')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
@@ -178,7 +179,7 @@ filetype plugin indent on    " required
   " let g:ale_lint_on_text_changed = 'never'
   let g:ale_lint_on_enter = 1
   let g:ale_lint_on_save = 1
-  let g:ale_set_quickfix = 1
+  " let g:ale_set_quickfix = 1
   let g:ale_set_loclist = 1
   let g:ale_warn_about_trailing_whitespace = 1
 
@@ -395,7 +396,7 @@ filetype plugin indent on    " required
   let g:clang_format#code_style = "mozilla"
   let g:clang_format#command = "clang-format-3.9"
   let g:clang_format#auto_format_on_insert_leave = 0
-  
+
   " map to <Leader>cf in C++ code
   autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
   autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
@@ -403,6 +404,11 @@ filetype plugin indent on    " required
   " autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
   " Toggle auto formatting:
   nmap <Leader>C :ClangFormatAutoToggle<CR>
+
+" YAPF Settings
+" a python format tool by google
+  map <C-Y> :call yapf#YAPF()<cr>
+  " imap <C-Y> <c-o>:call yapf#YAPF()<cr>
 
 " Custom Functions
   " toggle between number and relativenumber
@@ -449,13 +455,13 @@ filetype plugin indent on    " required
   autocmd BufEnter *.sh setlocal softtabstop=2
   autocmd BufRead,BufNewFile *.html,*.js setlocal shiftwidth=2
   autocmd BufRead,BufNewFile *.html,*.js setlocal tabstop=2
-  " autocmd BufWritePre * :%s/\s\+$//e
+  autocmd BufWritePre * :%s/\s\+$//e
   augroup END
 
-" quickfix settings:w
-  " nmap <leader>cn :cn<cr>
-  " nmap <leader>cp :cp<cr>
-  " nmap <leader>cw :cw 10<cr>
+" quickfix settings
+  nmap <leader>cn :cn<cr>
+  nmap <leader>cp :cp<cr>
+  nmap <leader>cw :cw 10<cr>
 
 " Backups
 
