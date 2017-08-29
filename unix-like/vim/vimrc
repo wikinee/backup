@@ -16,8 +16,12 @@ if has('mouse')
   set mouse=a                  " hold Shift, X will replace vim tack over action
   set mousemodel=popup
 endif
-set nowrap
+set nowrap                           " set no wrap when line too long
+set list                             " show tabs and line ending symbol
 set clipboard=unnamed
+syntax on
+set cindent                          " auto indent in C language
+set nomagic                          " allow use no \ character in search
 let &colorcolumn="81,"."121"
 runtime! plugin/default.vim
 set norelativenumber
@@ -153,6 +157,10 @@ filetype plugin indent on    " required
   autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
   "key map tagbar toggle
   map <F8> :TagbarToggle<CR>
+  " p: jump to tag location, and keep cursor stay in tagbar
+  " zj: jump next folder
+  " zk: jump previous folder
+  " s: change sort ways
 
 " emmet-vim settings
   " let g:user_emmet_mode='n'    "only enable normal mode functions.
