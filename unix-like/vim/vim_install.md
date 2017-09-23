@@ -22,7 +22,8 @@ vim install
 
 ```shell
 brew install vim --with-lua \
---with-override-system-vim --with-python --with-python3
+--with-override-system-vim --with-python --with-python3 \
+--with-termguicolors --with-xim
 ```
 
 - use Source code
