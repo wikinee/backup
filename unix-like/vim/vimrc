@@ -51,6 +51,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 " Plugin 'tpope/vim-fugitive', vim-fugitive will show git info
 " Plugin 'mattn/emmet-vim'
+Plugin 'rkulla/pydiction'
 Plugin 'vim-scripts/a.vim'
 " Plugin 'Valloric/YouCompleteMe', not recommend
 " if need, use vim-youcompleteme.deb and vam install youcompleteme
@@ -250,6 +251,10 @@ filetype plugin indent on    " required
   " let g:syntastic_enable_balloons = 1
   " nnoremap <F7> :SyntasticToggleMode <CR>
 
+" Pydiction
+  let g:pydiction_location = '/usr/share/vim/bundle/pydiction/complete-dict'
+  let g:pydiction_menu_height = 3
+
 " YouCompleteMe settings
   " use clang in ycm
   " " map <F6> :YcmCompleter GoToDefinition<CR>
@@ -441,6 +446,12 @@ filetype plugin indent on    " required
   autocmd FileType ruby setlocal softtabstop=2
   autocmd FileType ruby setlocal commentstring="\ %s
   autocmd FileType python setlocal commentstring="\ %s
+  autocmd FileType python setlocal tabstop=4
+  autocmd FileType python setlocal softtabstop=4
+  autocmd FileType python setlocal shiftwidth=4
+  autocmd FileType python setlocal textwidth=79
+  autocmd FileType python setlocal expandtab
+  autocmd FileType python setlocal fileformat=unix
   autocmd BufEnter *.cls setlocal filetype=java
   autocmd BufEnter *.zsh-theme setlocal filetype=zsh
   autocmd BufEnter Makefile setlocal noexpandtab
