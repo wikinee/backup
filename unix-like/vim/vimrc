@@ -17,14 +17,13 @@ if has('mouse')
   set mousemodel=popup
 endif
 set nowrap                           " set no wrap when line too long
-set list                             " show tabs and line ending symbol
 set clipboard=unnamed
 syntax on
 set cindent                          " auto indent in C language
 set nomagic                          " allow use no \ character in search
 let &colorcolumn="81,"."121"
 runtime! plugin/default.vim
-set norelativenumber
+" set norelativenumber
 
 " ======================== Vundle ========================
 
@@ -207,7 +206,7 @@ filetype plugin indent on    " required
   let g:ale_c_gcc_options = '-std=gnu99 -Wall `pkg-config --cflags --libs gtk+-3.0`'
   let g:ale_cpp_gcc_options = '-std=cpp11 -Wall `pkg-config --cflags --libs gtk+-3.0`'
   let g:ale_cpp_clang_options = '-std=cpp11 -Wall'
-  let g:ale_python_pylint_options = '--rcfile=/usr/local/selfconfig/myself.pylintrc'
+  let g:ale_python_pylint_options = '--rcfile=~/.pylintrc'
   let g:ale_c_build_dir_names=['build', 'bin']
 
 " a.vim help
