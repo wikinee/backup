@@ -13,6 +13,7 @@ sudo apt-get update;sudo apt-get upgrade
 echo "Install packages..."
 
 sudo apt-get install zsh git meld devhelp dconf-editor exuberant-ctags \
-    autojump clang-format-3.9 clang-3.9 screenfetch htop gitk unrar
+    autojump clang-format-3.9 clang-3.9 screenfetch htop gitk unrar vim \
+    cmake wps-office lnav
 
 echo "May be you also need vscode, sublime, chrome, and so on."
