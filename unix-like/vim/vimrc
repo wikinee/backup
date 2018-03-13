@@ -2,13 +2,17 @@
 " add alias vi='vim' in .bashrc or .zshrc or /etc/profile
 " create by wikinee
 " Dec.13, 2015 first release
-" Aug.18, 2017 update
+" Mar.13, 2018 update
 " Rule
 "   Don't put anything in your .vimrc you don't understand!
 
 " ======================== Global Settings ========================
 
 " This part must be on the top
+if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
+  set fileencodings=ucs-bom,utf-8,gbk18030,latin1
+endif
+
 set nocompatible                    " be iMproved, use vim to do as vi, required
 filetype off                        " required
 set backspace=indent,eol,start      " use backspace in Insert mode
@@ -21,9 +25,8 @@ set clipboard=unnamed
 syntax on
 set cindent                          " auto indent in C language
 set nomagic                          " allow use no \ character in search
+set fileencodings=utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 let &colorcolumn="81,"."121"
-runtime! plugin/default.vim
-" set norelativenumber
 
 " ======================== Vundle ========================
 
@@ -170,8 +173,21 @@ filetype plugin indent on    " required
   " let g:user_emmet_leader_key = '<C-e>'    " Control + e + ,
 
 " ale settings
+  function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+
+    return l:counts.total == 0 ? 'OK' : printf(
+    \   '%dW %dE',
+    \   all_non_errors,
+    \   all_errors
+    \)
+  endfunction
+
   set statusline+=%#warningmsg#
-  set statusline+=%{ALEGetStatusLine()}
+  set statusline+=%{LinterStatus()}
   set statusline+=%*
 
   " general options
@@ -432,6 +448,7 @@ filetype plugin indent on    " required
     set relativenumber
   endif
   endfunc
+  nnoremap <C-l> :call ToggleNumber()<cr>
 
   " map <F3> :w<CR>
   " map <F4> :call CompileC()<CR>
@@ -476,7 +493,7 @@ filetype plugin indent on    " required
   autocmd BufWritePre * :%s/\s\+$//e
   augroup END
 
-" quickfix settings
+" Quickfix settings
   nmap <leader>cn :cn<cr>
   nmap <leader>cp :cp<cr>
   nmap <leader>cw :cw 10<cr>
@@ -490,3 +507,7 @@ filetype plugin indent on    " required
 " Refer
   " article--http://dougblack.io/words/a-good-vimrc.html
   " Twitter--https://twitter.com/dougblackio
+
+" Fix Settings
+  runtime! plugin/default.vim
+  set norelativenumber
