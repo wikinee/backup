@@ -1,14 +1,14 @@
 // 将设置放入此文件中以覆盖默认设置
 {
     "files.autoSave": "onFocusChange",
-    "editor.fontSize": 17,
+    "editor.fontSize": 15,
     "editor.tabSize": 4,
     "editor.fontFamily": "Monaco",
     "editor.wordWrap": "off",
     // "editor.wrappingColumn": 80,
     // "editor.formatOnSave": true,
-    "clang-format.executable": "/usr/bin/clang-format-3.9",
-    "clang.executable": "/usr/bin/clang-3.9",
+    "clang-format.executable": "/usr/bin/clang-format-7.0",
+    "clang.executable": "/usr/bin/clang",
     "clang-format.style": "file",
     "clang.cflags": [
         // All
@@ -17,8 +17,8 @@
         //Public
         "-I${workspaceRoot}/include",
         "-I${cwd}/include",
-        "-I${env.ENVIROMENT_VARIABLE}/include"
-    ],
+        "-I${env.ENVIROMENT_VARIABLE}/include",
+     ],
     "clang.cxxflags": [
         // All
         "-std=c++11",
@@ -27,7 +27,7 @@
         //Public
         "-I${workspaceRoot}/include",
         "-I${cwd}/include",
-        "-I${env.ENVIROMENT_VARIABLE}/include"
+        "-I${env.ENVIROMENT_VARIABLE}/include",
     ],
     "editor.rulers": [
         80,
@@ -36,9 +36,15 @@
     "files.associations": {
         "*.am": "makefile"
     },
-    "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "editor.renderWhitespace": "boundary",
     "editor.trimAutoWhitespace": true,
-    "workbench.iconTheme": "vscode-icons",
-    "editor.renderIndentGuides": false
+    "editor.renderIndentGuides": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#ff0000"
+    }
 }
