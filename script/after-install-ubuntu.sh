@@ -17,6 +17,6 @@ landscape-client-ui-install onboard deja-dup
 sudo apt-get install git meld devhelp autojump \
 zsh unrar-free exuberant-ctags fonts-noto-cjk fonts-noto \
 fonts-noto-mono screenfetch htop gitk unrar vim \
-cmake wps-office lnav
+cmake lnav ttf-mscorefonts-installer
 
 sudo apt-get upgrade;sudo apt-get autoremove

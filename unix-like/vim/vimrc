@@ -32,7 +32,7 @@ let &colorcolumn="81,"."121"
 
 " Install bundle
 "   mkdir -p /usr/share/vim/bundle
-"   git clone https://github.com/VundleVim/Vundle.vim.git /usr/share/vim/bundle
+"   git clone https://github.com/VundleVim/Vundle.vim.git /usr/share/vim/bundle/Vundle.git
 " set the runtime path to include and initialize
 set rtp+=/usr/share/vim/bundle/Vundle.vim
 

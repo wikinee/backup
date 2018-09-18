@@ -61,7 +61,6 @@ brew install vim --with-lua \
                 --enable-multibyte \
                 --enable-pythoninterp=yes \
                 --enable-python3interp=yes \
-                --enable-termguicolors=yes \
                 --enable-xim \
                 --with-x \
                 --with-vim-name=vi \
@@ -70,7 +69,13 @@ brew install vim --with-lua \
 
     make VIMRUNTIMEDIR=/usr/local/share/vim/vim80 && sudo make install
 
-    sudo ln -s /usr/local/bin/vim /usr/local/bin/vi
+    sudo ln -s /usr/local/bin/vi /usr/bin/vi
+    sudo ln -s /usr/local/bin/vi /usr/bin/vim
+
+    sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 1
+    sudo update-alternatives --set editor /usr/bin/vim
+    sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
+    sudo update-alternatives --set vi /usr/bin/vim
 
     ```
 
