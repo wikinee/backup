@@ -7,8 +7,8 @@
     "editor.wordWrap": "off",
     // "editor.wrappingColumn": 80,
     // "editor.formatOnSave": true,
-    "clang-format.executable": "/usr/bin/clang-format-7.0",
-    "clang.executable": "/usr/bin/clang",
+    "clang-format.executable": "/usr/bin/clang-format-8",
+    "clang.executable": "/usr/bin/clang-8",
     "clang-format.style": "file",
     "clang.cflags": [
         // All
@@ -36,15 +36,16 @@
     "files.associations": {
         "*.am": "makefile"
     },
-    "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "editor.renderWhitespace": "boundary",
     "editor.trimAutoWhitespace": true,
-    "editor.renderIndentGuides": true,
+    "editor.renderIndentGuides": false,
     "diffEditor.ignoreTrimWhitespace": true,
-    "editor.formatOnPaste": true,
+    // "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "c-cpp-flylint.clang.executable": "clang-8",
+    "c-cpp-flylint.cppcheck.enable": false,
+    "c-cpp-flylint.flexelint.enable": false,
     "workbench.colorCustomizations": {
         "editorIndentGuide.activeBackground": "#ff0000"
     }
