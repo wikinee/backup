@@ -2,7 +2,7 @@
 #maybe you are using bash,fix the first line.
 # Program:
 #    install java sun, chmod +x install_sun_java.sh
-#    shoud use root run this shellscript before down sunjdk already!
+#    shoud use root run this shellscript after download sunjdk already!
 #History:
 #2016/09/01  wikinee First release
 #last update
