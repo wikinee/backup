@@ -27,16 +27,16 @@ rm -rf ~/Library/Caches/Homebrew
 
 #### 使用方法
 
-以[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/) 为例, 我修改了部分路径
+以[阿里源](https://opsx.alibaba.com/mirror) 为例, 我修改了部分路径
 
 ```shell
-cd /usr/local/Homebrew
+cd "$(brew --repo)"
 
-git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
 
-cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 
-git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
 
 brew tap homebrew/python
 
@@ -45,16 +45,18 @@ brew top homebrew/science
 brew upgrade $FORMULA
 
 brew update
-
 ```
+
 #### 其他镜像
+- 清华源：https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 - 中科大源: http://mirrors.ustc.edu.cn/homebrew.git
 - Coding 源: https://git.coding.net/homebrew/homebrew.git
 
 替换 homebrew bottles 默认源(homebrew二进制包的源)
 
 ```shell
-echo 'export HOMEBREW_BOTTLE_DOMAIN=export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bashrc
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com\
+/homebrew/homebrew-bottles' >> ~/.bashrc
 
 sourch ~/.bashrc
 ```
@@ -78,6 +80,12 @@ sourch ~/.bashrc
 sudo chown -R $(whoami) /usr/local
 sudo chmod g+w /usr/local
 ```
-
 这里 whoami 就是你主目录的名字
 
+#### 还原设置
+```
+$ cd "$(brew --repo)"
+$ git remote set-url origin https://github.com/Homebrew/brew.git
+$ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+$ git remote set-url origin https://github.com/Homebrew/homebrew-core.git
+```

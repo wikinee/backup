@@ -1,4 +1,4 @@
-Composer
+qComposer
 ------
 [原文](http://composer-proxy.jp)
 
