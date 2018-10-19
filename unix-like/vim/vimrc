@@ -60,6 +60,8 @@ Plugin 'bronson/vim-trailing-whitespace'
 " Plugin 'mattn/emmet-vim'
 Plugin 'rkulla/pydiction'
 Plugin 'vim-scripts/a.vim'
+" pip/pip3 install cmakelint
+Plugin 'richq/cmake-lint'
 " Plugin 'Valloric/YouCompleteMe', not recommend
 " if need, use vim-youcompleteme.deb and vam install youcompleteme
 
