@@ -1,14 +1,14 @@
 " ~/.vimrc
-" add alias vi='vim' in .bashrc or .zshrc or /etc/profile
-" create by wikinee
+" Add alias vi='vim' in .bashrc or .zshrc or /etc/profile
+" Create by wikinee
 " Dec.13, 2015 first release
-" Mar.13, 2018 update
+" Oct.31, 2018 update
 " Rule
 "   Don't put anything in your .vimrc you don't understand!
 
-" ======================== Global Settings ========================
+" ============================== Previous Setting ==============================
 
-" This part must be on the top
+" this part must be on the top
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
   set fileencodings=ucs-bom,utf-8,gbk18030,latin1
 endif
@@ -20,83 +20,65 @@ if has('mouse')
   set mouse=a                  " hold Shift, X will replace vim tack over action
   set mousemodel=popup
 endif
-set nowrap                           " set no wrap when line too long
+set nowrap                                      " set no wrap when line too long
 set clipboard=unnamed
 syntax on
-set cindent                          " auto indent in C language
-set nomagic                          " allow use no \ character in search
+set cindent                                          " auto indent in C language
+set nomagic                                 " allow use no \ character in search
 set fileencodings=utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 let &colorcolumn="81,"."121"
 
-" ======================== Vundle ========================
+" =================================== Vundle ===================================
 
-" Install bundle
+" install bundle
 "   mkdir -p /usr/share/vim/bundle
-"   git clone https://github.com/VundleVim/Vundle.vim.git /usr/share/vim/bundle/Vundle.vim
-" set the runtime path to include and initialize
+"   cd /usr/share/vim/bundle
+"   git clone https://github.com/VundleVim/Vundle.vim.git Vundle.vim
+" set the runtime path to include and initialize, like /usr/local.
 set rtp+=/usr/share/vim/bundle/Vundle.vim
 
-" alternatively, pass a path where Vundle should install plugins
 " call vundle#begin() to download in default path
+" keep Plugin commands between vundle#begin/end.
 call vundle#begin('/usr/share/vim/bundle')
 
-" let Vundle manage Vundle, required
-" plugin from https://github.com/ctrlpvim/ctrlp.vim
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'               " let Vundle manage Vundle, required
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'scrooloose/syntastic' now Replace by 'w0rp/ale'
-Plugin 'w0rp/ale'
+Plugin 'w0rp/ale' " replace Plugin 'scrooloose/syntastic'
 Plugin 'liuchengxu/vim-better-default'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'majutsushi/tagbar'
 Plugin 'sjl/gundo.vim'
-Plugin 'bronson/vim-trailing-whitespace'
-" Plugin 'tpope/vim-fugitive', vim-fugitive will show git info
-" Plugin 'mattn/emmet-vim'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'rkulla/pydiction'
 Plugin 'vim-scripts/a.vim'
-" pip/pip3 install cmakelint
-Plugin 'richq/cmake-lint'
+Plugin 'richq/cmake-lint'                  " need use pip/pip3 install cmakelint
+" alternative
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'tpope/vim-fugitive', vim-fugitive will show git info
+" Plugin 'mattn/emmet-vim'
 " Plugin 'Valloric/YouCompleteMe', not recommend
 " if need, use vim-youcompleteme.deb and vam install youcompleteme
+" all of your Plugins must be added before the following line
+call vundle#end()                                                     " required
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
-" plugin on GitHub repo
-"   plugin from http://vim-scripts.org/vim/scripts.html
-"   https://github.com/Shougo/neocomplete.vim
-"   git@github.com:majutsushi/tagbar.git
-
-" Git plugin not hosted on GitHub
-"   Plugin 'git://git.wincent.com/command-t.git'
-
-" git repos on your local machine (i.e. when working on your own plugin)
-"   Plugin 'file:///home/gmarik/path/to/plugin'
-"   https://github.com/mattn/emmet-vim
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin indent on                                             " required
+" to ignore plugin indent changes, instead use:
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginClean      - confirms removal of unused plugins;append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" ======================== Plugin Settings ========================
+" ============================== Plugin Setting ================================
 
 " CtrlP settings
   "let g:ctrlp_map = '<leader>p'
@@ -114,11 +96,11 @@ filetype plugin indent on    " required
   let g:ctrlp_follow_symlinks=1
   let g:ctrlp_regexp = 0
 
-" CtrlP help
-  "ctrl + j/k: up / down
-  "ctrl + x: split open
-  "ctrl + v: vsplit open
-  "ctrl + t: open in new tab
+  " more help
+  " ctrl + j/k: up / down
+  " ctrl + x: split open
+  " ctrl + v: vsplit open
+  " ctrl + t: open in new tab
 
 " Airline settings
   " must install Powerline fonts, url:
@@ -317,7 +299,7 @@ filetype plugin indent on    " required
   " let ycm and syntastic work together
   " " let g:ycm_register_as_syntastic_checker = 0
 
-" ======================== Other Settings ========================
+" =============================== Other Settings ===============================
 
 " Colors
 " /usr/share/vim/vim_VERSION/colors,default are following:
@@ -436,7 +418,7 @@ filetype plugin indent on    " required
   nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 " YAPF Settings
-" a python format tool by google
+  " a python format tool by google
   map <C-Y> :call yapf#YAPF()<cr>
   " imap <C-Y> <c-o>:call yapf#YAPF()<cr>
 
