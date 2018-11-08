@@ -21,9 +21,8 @@ vim install
 - in Mac
 
 ```shell
-brew install vim --with-lua \
---with-override-system-vim --with-python --with-python3 \
---with-termguicolors --with-xim
+    brew install vim --with-lua --with-override-system-vi \
+    --with-python --with-python@2 --with-termguicolors
 ```
 
 - use Source code
@@ -81,7 +80,7 @@ brew install vim --with-lua \
 
 需要重新配置可 输入 `# make distclean `清理一下上一次编译生成的所有文件
 
-### QA
+### Q & A
 
 **Q**: error while loading shared libraries: libgnomeui-2.so.0: cannot open shared object file: No such file or directory
 
