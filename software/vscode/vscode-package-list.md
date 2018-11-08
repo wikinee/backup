@@ -1,29 +1,40 @@
 Visual Studio Recommend Plugins
-------
+-------
 
 ### C / C++
+
 - C/C++
 - C/C++ Clang
 - C++ Intellisense
 - Clang-Format
-- CMake Tools
 - CMake
+- CMake Tools
 - vscode-fileheader
 
 ### Python
+
 - Python
 
 ### Linter
-- jshint
-- Guides
-- TODO Hightlight
-- Git lens
+
 - filesize
+- Git lens (Good, but confused)
+- Guides
+- jshint
+- Sort Lines
+- TODO Hightlight
 
 ### Themes
-- vscode-icons
+
 - Gruvbox Dark
 - Mac Classic VS Code Theme
+- vscode-icons
 
 ### Other
+
 - sublime-keymap
+- Polacode
+
+### Refer
+
+- [Awesome VScode](https://github.com/viatsko/awesome-vscode)
