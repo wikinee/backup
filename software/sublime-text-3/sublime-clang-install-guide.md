@@ -1,7 +1,9 @@
 SublimeClang
 ------
-   
+
 ### Install
+
+- 自己编译(不推荐)
 
 ```
     sudo apt-get install cmake build-essential clang git
@@ -16,8 +18,11 @@ SublimeClang
     cmake ..
     make
 ```
-或者使用已经编译好的版本 [downloads](https://github.com/quarnster/SublimeClang/downloads)
 
+- 作者发布(推荐)
+
+  - 使用已经编译好的版本 [downloads](https://github.com/quarnster/SublimeClang/downloads)
+  - 使用Package Control安装
 
 ### Configuration
 
@@ -52,8 +57,8 @@ sublimeclang settings ，然后选择带User那一行，在打开的文件中输
         "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.8/include",
         "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.8/include/*"
 
-        # Mac
-        "-I/usr/lib/clang/4.2/include/**",  
+        # for Mac
+        "-I/usr/lib/clang/4.2/include/**",
         "-I/Applications/Xcode.app/Contents/Developer/usr/lib/llvm-gcc/4.2.1/include"
     ]
 }
@@ -62,9 +67,8 @@ sublimeclang settings ，然后选择带User那一行，在打开的文件中输
 **注释**
 
     我的gcc版本为4.8，如果你的不是请替换对应的版本，在#include相应的头文件后保存当前文件，
-    
-    在接下来的操作中将更快的提示所包含在头文件的函数或者变量。
 
+    在接下来的操作中将更快的提示所包含在头文件的函数或者变量。
 
 ### Example
 
@@ -101,8 +105,5 @@ Project -> Edit Project，在所打开的配置文件中我更改如下：
     }
 }
 ```
-    
+
 综合以上，如果你有什么问题，请能提出，大家一起进步，希望你能爱上个家伙。
-
-
-
