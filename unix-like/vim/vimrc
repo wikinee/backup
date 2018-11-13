@@ -27,6 +27,11 @@ set cindent                                          " auto indent in C language
 set nomagic                                 " allow use no \ character in search
 set fileencodings=utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 let &colorcolumn="81,"."121"
+" not use arrow key
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
 
 " =================================== Vundle ===================================
 
@@ -55,6 +60,9 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'rkulla/pydiction'
 Plugin 'vim-scripts/a.vim'
 Plugin 'richq/cmake-lint'                  " need use pip/pip3 install cmakelint
+Plugin 'junegunn/vim-easy-align'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'scrooloose/nerdcommenter'
 " alternative
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
@@ -206,7 +214,7 @@ filetype plugin indent on                                             " required
   let g:ale_c_gcc_options = '-std=gnu99 -Wall `pkg-config --cflags --libs gtk+-3.0`'
   let g:ale_cpp_gcc_options = '-std=cpp11 -Wall `pkg-config --cflags --libs gtk+-3.0`'
   let g:ale_cpp_clang_options = '-std=cpp11 -Wall'
-  let g:ale_python_pylint_options = '--rcfile=~/.pylintrc'
+  " let g:ale_python_pylint_options = '--rcfile=~/.pylintrc'
   let g:ale_c_build_dir_names=['build', 'bin']
 
 " a.vim help
@@ -299,6 +307,49 @@ filetype plugin indent on                                             " required
   " let ycm and syntastic work together
   " " let g:ycm_register_as_syntastic_checker = 0
 
+" EasyAlign Settings
+  " ,a=            align by =
+  " ,a:            align by : like json or map
+
+  " default left align
+  " ,a<space>     align by first space
+  " ,a2<space>    align by second space
+  " ,a-<space>    align by last space
+  " ,a-2<space>   align by last second space
+  " ,a*<space>    align all space
+
+  " right align
+  " ,a<Enter>*<space>
+
+" Rainbow Parentheses Settings
+  let g:rbpt_colorpairs = [
+      \ ['brown',       'RoyalBlue3'],
+      \ ['Darkblue',    'SeaGreen3'],
+      \ ['darkgray',    'DarkOrchid3'],
+      \ ['darkgreen',   'firebrick3'],
+      \ ['darkcyan',    'RoyalBlue3'],
+      \ ['darkred',     'SeaGreen3'],
+      \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['brown',       'firebrick3'],
+      \ ['gray',        'RoyalBlue3'],
+      \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['Darkblue',    'firebrick3'],
+      \ ['darkgreen',   'RoyalBlue3'],
+      \ ['darkcyan',    'SeaGreen3'],
+      \ ['darkred',     'DarkOrchid3'],
+      \ ['red',         'firebrick3'],
+      \ ]
+  let g:rbpt_max = 16
+  let g:rbpt_loadcmd_toggle = 0
+
+" Nerdcomment Settings
+  let g:NERDSpaceDelims=1
+  " default key bindings
+  " <leader>cc   comment
+  " <leader>cu   uncomment
+  " <leader>c<space>  toggle comment
+  " <leader>cy   copy first, and comment
+
 " =============================== Other Settings ===============================
 
 " Colors
@@ -314,10 +365,10 @@ filetype plugin indent on                                             " required
     set termguicolor
   endif
 
-  set t_Co=256
-  " let g:solarized_termcolors=256
   set background=dark
+  set t_Co=256
   " colorscheme solarized
+  " let g:solarized_termcolors=256
   " colorscheme molokai
   colorscheme gruvbox
 
