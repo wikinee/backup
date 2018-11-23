@@ -3,21 +3,15 @@
     "files.autoSave": "onFocusChange",
     "editor.fontSize": 15,
     "editor.tabSize": 4,
-    "editor.fontFamily": "Monaco",
+    "editor.fontFamily": "'Monaco', 'MicrosoftYaHei'",
     "editor.wordWrap": "off",
     // "editor.wrappingColumn": 80,
     // "editor.formatOnSave": true,
-    "clang-format.executable": "/usr/bin/clang-format-8",
-    "clang.executable": "/usr/bin/clang-8",
+    "clang-format.executable": "/usr/bin/clang-format-7",
+    "clang.executable": "/usr/bin/clang-7",
     "clang-format.style": "file",
     "clang.cflags": [
-        // All
-        "-std=c89",
-        //Linux
-        //Public
-        "-I${workspaceRoot}/include",
-        "-I${cwd}/include",
-        "-I${env.ENVIROMENT_VARIABLE}/include"
+        "-std=gnu11",
     ],
     "clang.cxxflags": [
         // All
@@ -43,10 +37,14 @@
     // "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "c-cpp-flylint.clang.executable": "clang-8",
-    "c-cpp-flylint.cppcheck.enable": false,
-    "c-cpp-flylint.flexelint.enable": false,
     "workbench.colorCustomizations": {
         "editorIndentGuide.activeBackground": "#ff0000"
-    }
+    },
+    "cmake.configureOnOpen": true,
+    "workbench.colorTheme": "Xcode Default (Light)",
+    "git.confirmSync": false,
+    "python.formatting.provider": "autopep8",
+    "python.linting.pylintPath": "/usr/local/bin/pylint",
+    "python.linting.pylintUseMinimalCheckers": true,
+    "typescript.referencesCodeLens.enabled": true,
 }
