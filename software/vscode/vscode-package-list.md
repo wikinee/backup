@@ -4,7 +4,7 @@ Visual Studio Recommend Plugins
 ### C / C++
 
 - C/C++
-- C/C++ Clang
+- C/C++ Clang Command Adapter
 - C++ Intellisense
 - Clang-Format
 - CMake
@@ -21,19 +21,22 @@ Visual Studio Recommend Plugins
 - Git lens (Good, but confused)
 - Guides
 - jshint
+- Path Intellisense
 - Sort Lines
 - TODO Hightlight
 
-### Themes
+### Themes and Icons
 
 - Gruvbox Dark
 - Mac Classic VS Code Theme
+- Xcode Default Theme
 - vscode-icons
 
 ### Other
 
 - sublime-keymap
 - Polacode
+
 
 ### Refer
 
