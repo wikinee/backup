@@ -1,0 +1,50 @@
+# deb http://deb.debian.org/debian/ testing main
+# deb-src http://deb.debian.org/debian/ testing main
+
+# aliyun
+# deb http://mirrors.aliyun.com/debian testing main contrib non-free
+# deb-src http://mirrors.aliyun.com/debian testing main contrib non-free
+# deb http://mirrors.aliyun.com/debian testing-updates main contrib non-free
+# deb-src http://mirrors.aliyun.com/debian testing-updates main contrib non-free
+# deb http://mirrors.aliyun.com/debian testing-proposed-updates main contrib non-free
+# deb-src http://mirrors.aliyun.com/debian testing-proposed-updates main contrib non-free
+# deb http://mirrors.aliyun.com/debian-security testing/updates main contrib non-free
+# deb-src http://mirrors.aliyun.com/debian-security testing/updates main contrib non-free
+
+# 163
+# deb http://mirrors.163.com/debian/ testing main non-free contrib
+# deb http://mirrors.163.com/debian/ testing-updates main non-free contrib
+# deb http://mirrors.163.com/debian/ testing-backports main non-free contrib
+# deb http://mirrors.163.com/debian/ testing-proposed-updates main non-free contrib
+# deb-src http://mirrors.163.com/debian/ testing main non-free contrib
+# deb-src http://mirrors.163.com/debian/ testing-updates main non-free contrib
+# deb-src http://mirrors.163.com/debian/ testing-backports main non-free contrib
+# deb-src http://mirrors.163.com/debian/ testing-proposed-updates main non-free contrib
+# deb http://mirrors.163.com/debian-security/ testing/updates main non-free contrib
+# deb-src http://mirrors.163.com/debian-security/ testing/updates main non-free contrib
+
+# tuna (ftp.cn2.debian.org)
+# deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free
+# deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free
+# deb https://mirrors.tuna.tsinghua.edu.cn/debian-security testing/updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security testing/updates main contrib non-free
+
+# ustc (ftp.cn.debian.org)
+deb https://mirrors.ustc.edu.cn/debian/ testing main contrib non-free
+deb-src https://mirrors.ustc.edu.cn/debian/ testing main contrib non-free
+deb https://mirrors.ustc.edu.cn/debian/ testing-updates main contrib non-free
+deb-src https://mirrors.ustc.edu.cn/debian/ testing-updates main contrib non-free
+deb https://mirrors.ustc.edu.cn/debian/ testing-proposed-updates main contrib non-free
+deb-src https://mirrors.ustc.edu.cn/debian/ testing-proposed-updates main contrib non-free
+deb https://mirrors.ustc.edu.cn/debian-security/ testing/updates main contrib non-free
+deb-src https://mirrors.ustc.edu.cn/debian-security/ testing/updates main contrib non-free
+
+# debian
+# deb http://deb.debian.org/debian testing main contrib non-free
+# deb-src http://deb.debian.org/debian testing main contrib non-free
+# deb http://deb.debian.org/debian-security/ testing/updates main contrib non-free
+# deb-src http://deb.debian.org/debian-security/ testing/updates main contrib non-free
+# deb http://deb.debian.org/debian testing-updates main contrib non-free
+# deb-src http://deb.debian.org/debian testing-updates main contrib non-free
