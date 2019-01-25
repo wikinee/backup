@@ -5,15 +5,29 @@ Configure_Backup
 
 ```shell
 .
-├── git
-│   ├── fetch.sh
-│   ├── gitignore
-│   └── git.sh
+├── git-guide
+│   ├── git-automatic.sh
+│   ├── gitconfig
+│   ├── git-fetch.sh
+│   ├── git-hooks-commit-msg
+│   ├── gitignore-example
+│   └── git-template
+├── icons
+│   ├── GitHub-Mark-120px-plus.png
+│   ├── GitHub-Mark-32px.png
+│   ├── GitHub-Mark-64px.png
+│   ├── Octocat.jpg
+│   ├── osi_symbol.png
+│   ├── README.md
+│   └── ssh-askpass-gnome.png
+├── LICENSE
 ├── mirrors
-│   ├── Android_SDK.md
-│   ├── composer_mirrors.md
+│   ├── android-sdk.md
+│   ├── composer-mirrors.md
 │   ├── homebrew.md
-│   ├── install_solarized_for_vim.sh
+│   ├── hzwhuang-ubuntu-ss-qt5-disco.list
+│   ├── install-ruby-by-rvm.sh
+│   ├── install-solarized-for-vim.sh
 │   ├── pip
 │   │   ├── aliyun
 │   │   │   └── pip
@@ -22,94 +36,103 @@ Configure_Backup
 │   │   ├── README.MD
 │   │   └── v2ex
 │   │       └── pip
-│   ├── ruby_install_by_rvm.sh
-│   ├── taonpm.md
-│   └── Ubuntu_China_sources.list
+│   ├── source-list-debian.list
+│   ├── source-list-debian-testing.list
+│   ├── source-list-deepin.list
+│   ├── source-list-google-chrome.list
+│   ├── source-list-llvm.list
+│   ├── source-list-mint-17.list
+│   ├── source-list-sublime-text.list
+│   ├── source-list-ubuntu-china.list
+│   ├── source-list-vscode.list
+│   └── taobao-npm.md
 ├── README.md
 ├── script
-│   ├── after_install_ubuntu.sh
-│   └── fotiaoqiang.sh
+│   ├── after-install-debian.sh
+│   ├── after-install-oh-my-zsh.sh
+│   ├── after-install-ubuntu.sh
+│   ├── go-dev-build.sh
+│   ├── install-sun-java8.sh
+│   ├── oh-my-zsh.sh
+│   └── spuug.rb
 ├── software
 │   ├── clang
-│   │   └── clang-format
+│   │   ├── chromium-clang-format
+│   │   ├── facebook-clang-format
+│   │   ├── google-clang-format
+│   │   ├── llvm-clang-format
+│   │   ├── mozilla-clang-format
+│   │   ├── myself-clang-format
+│   │   └── webkit-clang-format
 │   ├── clion
+│   │   ├── C File Header
 │   │   ├── clion.desktop
 │   │   ├── CMakeLists.txt
+│   │   ├── MyCLionStyle.xml
 │   │   └── pycharm.desktop
-│   ├── cpplint
+│   ├── devhelp
+│   │   └── pygobjec-books.md
+│   ├── kdevelop
+│   │   └── KDevelop.desktop
+│   ├── linter-script
+│   │   ├── CPPLINT.cfg
 │   │   ├── cpplint.py
-│   │   ├── README.md
-│   │   └── README.md~
-│   ├── Mutate
-│   │   ├── config.ini
-│   │   ├── frequence
+│   │   ├── pylintrc-chromium.pylintrc
+│   │   ├── pylintrc-google.pylintrc
+│   │   ├── pylintrc-myself.pylintrc
+│   │   ├── pylintrc-pep8.pylintrc
+│   │   └── README.md
+│   ├── mutate
+│   │   ├── myself-config.ini
 │   │   ├── README.MD
 │   │   └── scripts
-│   │       ├── baidu_search
-│   │       ├── calc
-│   │       ├── chromebookmarks
-│   │       ├── ddg_search
-│   │       ├── facebook_search
-│   │       ├── find
-│   │       ├── github
-│   │       ├── google_search
-│   │       ├── googletranslate
-│   │       ├── kill
-│   │       ├── logout
-│   │       ├── reboot
-│   │       ├── shutdown
 │   │       ├── sogou_search
-│   │       ├── topprocess
 │   │       ├── wechat_search
 │   │       └── zhihu_search
+│   ├── qtcreator
+│   │   └── qtcreator-input-chinese.md
+│   ├── redshift
+│   │   ├── install-redshift.sh
+│   │   └── redshift.conf
 │   ├── sublime-text-3
-│   │   ├── Installed Packages
-│   │   │   ├── All Autocomplete.sublime-package
-│   │   │   ├── CTags.sublime-package
-│   │   │   ├── Emmet.sublime-package
-│   │   │   ├── MarkdownEditing.sublime-package
-│   │   │   ├── Package Control.sublime-package
-│   │   │   └── SideBarEnhancements.sublime-package
-│   │   ├── Packages
-│   │   │   ├── C Improved
-│   │   │   ├── CMakeLists
-│   │   │   ├── CoolFormat
-│   │   │   ├── GitGutter
-│   │   │   └── User
-│   │   ├── README.md
-│   │   ├── sublime3_chinese_input.md
-│   │   ├── sublime_clang_install.md
+│   │   ├── sublime-Chinese-input.md
+│   │   ├── sublime-clang-install-guide.md
 │   │   ├── sublime-fcitx.c
-│   │   ├── sublime_package_list.md
-│   │   ├── sublime_proxy.md
+│   │   ├── sublime-package-recommend.md
+│   │   ├── sublime-proxy-guide.md
 │   │   └── sublime_text.desktop
 │   ├── tmux
 │   │   ├── tmux.conf
-│   │   └── tmux tutorial and configurations.md
-│   └── vscode
-│       ├── keybindings.json
-│       ├── settings.json
-│       ├── tasks.json
-│       └── vscode_package_list.md
-└── Xnix
+│   │   └── tmux-tutorial-and-configurations.md
+│   ├── vscode
+│   │   ├── c_cpp_properties_gtk.json
+│   │   ├── cpp.json
+│   │   ├── keybindings.json
+│   │   ├── settings.json
+│   │   ├── tasks.json
+│   │   └── vscode-package-list.md
+│   └── yapf
+│       └── style.yapf
+└── unix-like
+    ├── 70-fonts-noto-cjk.conf
+    ├── linux-beautify.md
+    ├── linux-bug-track.md
     ├── README.md
     ├── shell
     │   ├── bashrc
     │   ├── inputrc
-    │   ├── install_sun_java.sh
-    │   ├── oh-my-zsh.sh
     │   ├── zshrc
-    │   └── zshrc_for_mac
+    │   └── zshrc-for-mac
     └── vim
-        ├── install_solarized_for_vim.sh
+        ├── gruvbox.vim
         ├── molokai.vim
         ├── solarized.vim
-        ├── syntastic_clang_check_config
-        ├── vim_install.md
+        ├── vim-install-guide.md
         ├── vimrc
-        ├── vimrc_mac
-        └── ycm_extra_conf.py
+        ├── vimrc-mac
+        ├── vim-syntastic-clang-check-config
+        └── ycm-extra-conf.py
 ```
 ### Have Fun !
 
-46 directories, 59 files
+31 directories, 96 files
