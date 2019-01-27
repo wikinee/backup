@@ -64,3 +64,6 @@ target/
 
 # custom define
 .vscode/
+
+# for mac os
+.DS_Store
