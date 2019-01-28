@@ -4,7 +4,10 @@
 # EXAMPLE:
 # $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
 # $ sudo mv ./Ubuntu_14.04_LTS_China_sources.list /etc/apt/sources.list
-
+#
+# if NO_PUBKEY 3B4FE6ACC0B21F32
+#   apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 3B4FE6ACC0B21F32
+#
 # llvm suit for Ubuntu 16.04, other version need visit apt.llvm.org 
 # maybe add gpg.key first:
 # wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
