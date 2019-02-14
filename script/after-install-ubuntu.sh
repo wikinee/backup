@@ -18,6 +18,6 @@ sudo apt-get update
 sudo apt-get install git meld devhelp autojump \
 zsh unrar-free exuberant-ctags fonts-noto-cjk fonts-noto \
 fonts-noto-mono screenfetch htop gitk unrar vim \
-cmake lnav ttf-mscorefonts-installer
+cmake lnav ttf-mscorefonts-installer shellcheck
 
 sudo apt-get upgrade;sudo apt-get autoremove
