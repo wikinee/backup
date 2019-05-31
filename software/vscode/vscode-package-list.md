@@ -18,7 +18,7 @@ Visual Studio Recommend Plugins
 ### Linter
 
 - filesize
-- Git lens (Good, but confused)
+- GitLens (Good, but confused)
 - Guides
 - jshint
 - Path Intellisense
@@ -36,7 +36,10 @@ Visual Studio Recommend Plugins
 
 - sublime-keymap
 - Polacode
-
+- SonarLint (need JRE environment)
+- TranslationToolbox
+- Chinese(Simplified) Language Pack for vscode
+- shellcheck
 
 ### Refer
 
