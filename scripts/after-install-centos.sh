@@ -8,7 +8,8 @@
 echo "Now, install some package..."
 sudo yum install gcc rpm-build rpm-devel rpmlint make \
 python bash coreutils diffutils patch rpmdevtools meson \
-cmake3 python3
+cmake3 python3 epel-rpm-macros git devhelp meld gitk \
+rpmdeplint
 
 echo "Now, add ~/.rpmmacros example"
 echo "%_topdir %(echo \`pwd\`)" >> ~/.rpmmacros
