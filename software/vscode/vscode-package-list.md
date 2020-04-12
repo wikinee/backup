@@ -14,6 +14,7 @@ Visual Studio Recommend Plugins
 ### Python
 
 - Python
+- Kite Python Autocomplete
 
 ### Linter
 
