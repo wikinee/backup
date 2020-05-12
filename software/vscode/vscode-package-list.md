@@ -23,7 +23,7 @@ Visual Studio Recommend Plugins
 - jshint
 - Path Intellisense
 - Sort Lines
-- TODO Hightlight
+- TODO Hightlight / TODO Tree
 
 ### Themes and Icons
 
@@ -35,8 +35,11 @@ Visual Studio Recommend Plugins
 ### Other
 
 - sublime-keymap
+- Better Comments
 - Polacode
 - SonarLint (need JRE environment)
+- Better Align
+- change-case
 - TranslationToolbox
 - Chinese(Simplified) Language Pack for vscode
 - shellcheck
