@@ -1,6 +1,8 @@
 Sublime Text Package List
 ------
 
+## For sublime-text
+
 ### sublime
 - [Package Control](https://packagecontrol.io/Package Control.sublime-package)
 - [CoolFomat](https://github.com/akof1314/Sublime-CoolFormat)
@@ -20,3 +22,7 @@ Sublime Text Package List
 
 ### view
 - [spacegray Theme](https://github.com/kkga/spacegray)
+
+## For sublime-merge
+
+### [sublime-merge](https://www.sublimemerge.com/download)

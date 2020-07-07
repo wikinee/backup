@@ -44,6 +44,7 @@ Visual Studio Recommend Plugins
 - TranslationToolbox
 - Chinese(Simplified) Language Pack for vscode
 - shellcheck
+- Foam (Writing Plugin)
 
 ### Refer
 
