@@ -261,3 +261,14 @@ function toLaji()
 
 alias to-laji=toLaji $1;
 
+if [ -d "/usr/local/go" ]; then
+    export GOROOT=/usr/local/go
+    export GOPATH="$HOME/Test/GoTest"
+    export PATH=$PATH:$GOROOT/bin
+    export GOPROXY=https://goproxy.io
+    export GO111MODULE=on
+fi
+
+#setxkbmap -option "ctrl:swapcaps"
+# xmodmap ~/.Xmodmap >/dev/null 2>&1
+
