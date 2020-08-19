@@ -46,6 +46,7 @@ Visual Studio Recommend Plugins
 - Chinese(Simplified) Language Pack for vscode
 - shellcheck
 - Foam (Writing Plugin)
+- Rest Client
 
 ### Refer
 

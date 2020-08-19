@@ -14,6 +14,6 @@ echo "Install packages..."
 
 sudo apt-get install zsh git meld devhelp dconf-editor exuberant-ctags \
     autojump screenfetch htop gitk unrar vim tree cmake lnav shellcheck \
-    d-feet
+    d-feet apt-transport-https
 
 echo "May be you also need vscode, sublime, chrome, and so on."
