@@ -54,7 +54,7 @@ plugins=(git autojump)
 
 # User configuration
 
-export PATH="/Users/wiki/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -69,62 +69,57 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
+# for Compilation
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
+# for Java
+export JAVA_HOME=/usr/lib/jvm/java-8-sun
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+alias gcms='cloneMyself() { git clone git@github.com:wikinee/$1.git ${2:-$1}     ; }; cloneMyself'
+alias cc='reset'
+alias vi='vim'
+
+# for clipboard
+# xclip 不加选项时只在保存在X PRIMARY（应该是终端剪切板）
+# 加上选项 -selection c后保存在 X CLIPBOARD（应该是外部程序剪切板)
+alias pbcopy='xclip -selection c '
+alias pbpast='xclip -selection c -o'
+
+# self define cmake clean
+alias cmakeCleanAll='rm -rf CMakeCache.txt Makefile CMakeFiles cmake_install.cmake'
+alias cmakeClean='find .  -name "CMakeCache.txt" -exec rm -rf {} \;'
+export TERM=xterm-256color
+
+# for Linux
+export EDITOR="vim"
+export TERM=xterm-256color
+
+# for Debian
+# alias clearConfig="dpkg -l | grep \"^rc\"| awk \"{print $2}\" | xargs sudo aptitude -y purge"
+
+# for SSH
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+function toLaji()
+{
+	scp $1 SOMENAME@Laji:~
+}
+alias to-laji=toLaji $1;
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# for Golang
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/Go
+
+# for Mirrors
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
-        --cache=$HOME/.npm/.cache/cnpm \
-        --disturl=https://npm.taobao.org/dist \
-       --userconfig=$HOME/.cnpmrc"
-alias workon='source ~/DjangoEnv/django1.8/bin/activate'
-alias workout='deactivate'
-alias gst='git status'
-alias gco='git checkout'
-alias gpl='git pull'
-alias gbr='git branch'
-alias gad='git add'
-alias gcm='git commit -m'
-alias gcma='git commit -am'
-alias gpu='git push'
-alias vi='vim'
-alias porting='lsof -i'
-alias gcms='cloneMyself() { git clone git@github.com:wikinee/$1.git ${2:-$1} ; }; cloneMyself'
-alias cls='clear'
-alias ll='ls -l'
-alias la='ls -a'
-alias vi='vim'
-alias javac="javac -J-Dfile.encoding=utf8"
-alias grep="grep --color=auto"
-alias -s html=mate   # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开
-alias -s rb=mate     # 在命令行直接输入 ruby 文件，会在 TextMate 中打开
-alias -s py=vi       # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
-alias -s js=vi
-alias -s c=vi
-alias -s java=vi
-alias -s txt=vi
-alias -s gz='tar -xzvf'
-alias -s tgz='tar -xzvf'
-alias -s zip='unzip'
-alias -s bz2='tar -xjvf'
-alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gj='shutdown -h now'
-alias vi='/usr/local/bin/vi'
-
-#this line is for autojump
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
-# Virtualenvwrapper Settings
-export WORKON_HOME=$HOME/ENV     
+            --cache=$HOME/.npm/.cache/cnpm \
+            --disturl=https://npm.taobao.org/dist \
+            --userconfig=$HOME/.cnpmrc"
 export HOMEBREW_BOTTLE_DOMAIN='https://mirrors.ustc.edu.cn/homebrew-bottles'
 
-alias cc='reset'
+# for Qt
+# export PATH="/usr/local/opt/qt/bin:$PATH"
